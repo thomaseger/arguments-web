@@ -1,0 +1,45 @@
+/*Google Web Fonts imports*/
+
+/*
+
+@import url(http://fonts.googleapis.com/css?family=Iceland);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+*/
+
+/*common css*/
+body {
+  margin: 0;
+  margin-top: 36px;
+  color: #333;
+}
+
+#container {
+  font-size: 10pt;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+#header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  
+  background-color: #060;
+  color: white;
+  font-family: 'Iceland', sans-serif;
+  
+  border-bottom: 1px solid #1F4A1B;
+}
+
+#header-bar-left {
+  float: left;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+#header-bar-right {
+  float: right;
+  font-size: 12pt;
+}

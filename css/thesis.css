@@ -1,0 +1,33 @@
+.thesis-container {
+  display: inline-block;
+  
+  max-width: 600px;
+  max-height: 350px;
+  
+  overflow: auto;
+  
+  margin-top: 10px;
+  margin-left: 10px;
+  
+  border-radius:10px;
+  background-color: #efefef;
+  border: 1px solid #1F4A1B;   
+}
+
+.thesis-container  ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.thesis {
+  padding: 5px;
+  font-size: 16pt;
+  color: #333;
+}
+
+.argument {
+  padding: 5px;
+  border-top: 1px solid #ccc;
+  margin: 3px;
+}

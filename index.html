@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" id="arguments">
+<head>
+  <title>arguments!</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/thesis.css" />
+       
+  <script src="js/lib/jquery-1.9.1.js"></script> 
+
+  <script type="text/javascript">
+    
+    $(document).ready(function(){
+       //https://api.facebook.com/method/users.getInfo?uids=4&fields=name&access_token=AAAAAAITEghMBABGDtoRpeLlvMY7gDgZBlcdAignZBj8lXHglgfyf5yAD7f0fw5SnxVCPDDcx351ftEu28IswcW6zZCOKtWwwfc3y6hBabxxZBEKCysUG&format=json
+      //"http://192.168.1.40:4000/?callback=?"
+      $.getJSON("http://192.168.1.40:4000/", function() {})
+      .done( function(data) {
+          console.log(data.id);    
+        })
+      .fail(function(err){
+         console.log(err);
+        //console.log(JSON.stringify(err));
+      });
+      
+    
+      
+    });
+  
+  
+    
+  </script> 
+  
+  
+</head>
+
+<body>
+  <div id="container">
+    <div id="header-bar">
+      <div id="header-bar-left" class="logo">Arguments!</div>
+      <div id="header-bar-right">Logged in as <strong>tom</strong></div>
+    </div>
+    
+    <!--<div class="thesis-container">
+      <ul>
+        <li class="thesis">
+        Green is cool!
+        </li>
+        <li class="argument pro">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+        </li>
+        <li class="argument con">
+          At vero eos et accusam et justo duo dolores et ea rebum. 
+        </li>
+      </ul>
+    </div> -->
+  </div>
+</body>
+</html>
+
