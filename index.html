@@ -11,7 +11,7 @@
 
   <script type="text/javascript">
     $(document).ready(function() {
-      var ui = new UI;
+      var ui = new UI();
       ui.showAllTheses();
     });  
   </script> 
@@ -24,21 +24,15 @@
       <div id="header-bar-left" class="logo">Arguments!</div>
       <div id="header-bar-right">Logged in as <strong>tom</strong></div>
     </div>
-    
-    <!--<div class="thesis-container">
+
+    <div class="thesis-container create">
       <ul>
         <li class="thesis">
-        Green is cool!
-        </li>
-        <li class="argument pro">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.
-        </li>
-        <li class="argument con">
-          At vero eos et accusam et justo duo dolores et ea rebum. 
+          <span class="edit">&#9998;</span> <input type="text" value="Your new thesis here..." onfocus="if(this.value == this.defaultValue) this.value = '';" onblur="if(!this.value) this.value = this.defaultValue;">
         </li>
       </ul>
-    </div>-->
-
+    </div>
   </div>
+
 </body>
 </html>

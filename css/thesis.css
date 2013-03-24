@@ -1,7 +1,8 @@
 .thesis-container {
   display: inline-block;
+  vertical-align: top;
   
-  max-width: 600px;
+  max-width: 400px;
   max-height: 350px;
   
   overflow: auto;
@@ -9,12 +10,12 @@
   margin-top: 10px;
   margin-left: 10px;
   
-  border-radius:10px;
-  background-color: #efefef;
-  border: 1px solid #1F4A1B;   
+  border-radius: 10px;
+  background-color: #F6F6F6;
+  border: 1px solid #ccc;   
 }
 
-.thesis-container  ul {
+.thesis-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -30,4 +31,49 @@
   padding: 5px;
   border-top: 1px solid #ccc;
   margin: 3px;
+  font-size: 11pt;
+}
+
+.votes {
+  font-size: 8pt;
+  font-weight: bold;
+  padding-left: 6px;
+  vertical-align: middle;
+}
+
+.votes a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.votes a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.pro {
+  color: #3E6147;
+}
+
+.con {
+  color: #6B3E41;
+}
+
+.thesis input {
+  width: 300px;
+  border: none;
+  background-color: inherit;
+  font-size: inherit;
+  padding: inherit;
+  color: inherit;
+  font-family: inherit;
+  margin: inherit;
+}
+
+.create {
+  width: 400px;
+}
+
+.edit {
+  color: #999;
 }
