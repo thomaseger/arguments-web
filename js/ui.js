@@ -1,6 +1,6 @@
 function UI() {
 
-	var thesesUrl = "http://192.168.1.76:4000/api/theses";
+	var thesesUrl = "http://localhost:4000/api/theses";
 	var argumentsDisplayLimit = 2;
 
 
@@ -14,13 +14,13 @@ function UI() {
 				var list = $('<ul/>');
 
 				var thesisItem = $('<li/>', {'class': 'thesis'});
-				thesisItem.text(this['Text']);
+				thesisItem.text(cutText(this['Text'], 100));
 				list.append(thesisItem);
 
 				$.each(this['Arguments'], function(index, value){
 					if(index < argumentsDisplayLimit) {
 						var argumentItem = $('<li/>', {'class': 'argument ' + (this['Contra'] ? 'con' : 'pro')});
-						argumentItem.text(cutText(this['Text'], 250));
+						argumentItem.text(cutText(this['Text'], 180));
 
 						var votes = $('<span/>', {'class': 'votes'});
 						votes.html(' <a href="#">+' + this['Votes'] + "</a>");
@@ -30,6 +30,10 @@ function UI() {
 					}
 				});
 				
+				var addArgumentItem = $('<li/>', {'class': 'argument createArgument'});
+				addArgumentItem.html('<span class="edit">&#9998;</span> <input type="text" value="Your new argument here..." onfocus="if(this.value == this.defaultValue) this.value = \'\';" onblur="if(!this.value) this.value = this.defaultValue;">')
+				list.append(addArgumentItem);
+
 				thesisContainer.append(list);
 				container.append(thesisContainer);
 			});

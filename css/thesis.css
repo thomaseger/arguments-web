@@ -3,12 +3,11 @@
   vertical-align: top;
   
   max-width: 400px;
-  height: 350px;
   
   overflow: auto;
   
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
   
   border-radius: 5px;
   background-color: #F6F6F6;
@@ -71,15 +70,25 @@
 }
 
 .sub {
-  height: 280px;
+  height: auto;
   float: left;
   margin-top: 75px;
 }
 
-.create {
+.createThesis {
   width: 400px;
-  height: auto;
-  margin-left: -400px;
+  margin-left: -402px;
+}
+
+.createArgument input {
+  width: 300px;
+  border: none;
+  background-color: inherit;
+  font-size: inherit;
+  padding: inherit;
+  color: #999;
+  font-family: inherit;
+  margin: inherit;
 }
 
 .edit {
