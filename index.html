@@ -7,36 +7,12 @@
   <link rel="stylesheet" type="text/css" href="css/thesis.css" />
        
   <script src="js/lib/jquery-1.9.1.js"></script> 
+  <script src="js/ui.js"></script> 
 
   <script type="text/javascript">
     $(document).ready(function() {
-      $.getJSON("http://192.168.1.40:4000/api/theses", function() {})
-      .done(function(data) {
-
-        $.each(data, function() {
-          var container = $('#container')
-          var thesisContainer = $('<div/>', {'class': 'thesis-container'});
-          var list = $('<ul/>');
-
-          var thesisItem = $('<li/>', {'class': 'thesis'});
-          thesisItem.text(this['Text']);
-          list.append(thesisItem);
-
-          $.each(this['Arguments'], function(){
-            var argumentItem = $('<li/>', {'class': 'argument'}); //TODO: Differentiate between pros and cons.
-            argumentItem.text(this['Text']);
-            list.append(argumentItem);
-          });
-
-          thesisContainer.append(list);
-          container.append(thesisContainer);
-        });
-
-      })
-      .fail(function(error) {
-        console.log("Request failed because of the following error: ");
-        console.log(error);
-      });
+      var ui = new UI;
+      ui.showAllTheses();
     });  
   </script> 
   
@@ -49,7 +25,7 @@
       <div id="header-bar-right">Logged in as <strong>tom</strong></div>
     </div>
     
-    <div class="thesis-container">
+    <!--<div class="thesis-container">
       <ul>
         <li class="thesis">
         Green is cool!
@@ -61,7 +37,8 @@
           At vero eos et accusam et justo duo dolores et ea rebum. 
         </li>
       </ul>
-    </div>
+    </div>-->
+
   </div>
 </body>
 </html>
