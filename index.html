@@ -10,6 +10,10 @@
   <script src="js/ui.js"></script> 
 
   <script type="text/javascript">
+    $.ajaxSetup ({
+      timeout: 3000
+    });
+
     $(document).ready(function() {
       var ui = new UI();
       ui.showAllTheses();
