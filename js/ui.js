@@ -1,6 +1,6 @@
 function UI() {
 
-	var thesesUrl = "http://192.168.1.40:4000/api/theses";
+	var thesesUrl = "http://192.168.1.76:4000/api/theses";
 	var argumentsDisplayLimit = 2;
 
 
@@ -8,9 +8,9 @@ function UI() {
 		$.getJSON(thesesUrl, function() {})
 		.done(function(data) {
 
-			$.each(data, function() {
+			$.each(data, function(index, value) {
 				var container = $('#container')
-				var thesisContainer = $('<div/>', {'class': 'thesis-container'});
+				var thesisContainer = $('<div/>', {'class': 'thesis-container' + (index == 0 ? ' sub' : '')});
 				var list = $('<ul/>');
 
 				var thesisItem = $('<li/>', {'class': 'thesis'});
@@ -38,6 +38,10 @@ function UI() {
 		.fail(function(error) {
 			console.log("Request failed because of the following error: ");
 			console.log(error);
+			
+			var errText = $('<div/>', {'class': 'error'});
+			errText.text("Sorry, arguments! ist momentan nicht erreichbar. Falls du dir sicher bist, dass deine Internetverbindung funktioniert, versuche es bitte erneut.");
+			$('#container').append(errText);
 		});
 	}
 
