@@ -1,9 +1,11 @@
 .thesis-container {
   display: inline-block;
+  
+  width: 400px;
+  max-height: 400px;
+
   vertical-align: top;
-  
-  max-width: 400px;
-  
+
   overflow: auto;
   
   margin-top: 20px;
@@ -11,7 +13,7 @@
   
   border-radius: 5px;
   background-color: #F6F6F6;
-  border: 1px solid #ccc;   
+  border: 1px solid #ccc;  
 }
 
 .thesis-container ul {
@@ -70,14 +72,12 @@
 }
 
 .sub {
-  height: auto;
-  float: left;
-  margin-top: 75px;
+  margin-top: 85px;
+  margin-left: -405px;
 }
 
 .createThesis {
-  width: 400px;
-  margin-left: -402px;
+
 }
 
 .createArgument input {
@@ -93,4 +93,9 @@
 
 .edit {
   color: #999;
+}
+
+.error {
+  text-align: center;
+  font-weight: bold;
 }

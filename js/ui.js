@@ -1,6 +1,6 @@
 function UI() {
 
-	var thesesUrl = "http://localhost:4000/api/theses";
+	var thesesUrl = "http://192.168.1.76:4000/api/theses";
 	var argumentsDisplayLimit = 2;
 
 
@@ -10,7 +10,7 @@ function UI() {
 
 			$.each(data, function(index, value) {
 				var container = $('#container')
-				var thesisContainer = $('<div/>', {'class': 'thesis-container' + (index == 0 ? ' sub' : '')});
+				var thesisContainer = $('<span/>', {'class': 'thesis-container' + (index == 0 ? ' sub' : '')});
 				var list = $('<ul/>');
 
 				var thesisItem = $('<li/>', {'class': 'thesis'});
