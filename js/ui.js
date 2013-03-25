@@ -1,6 +1,6 @@
 function UI() {
 
-	var thesesUrl = "http://192.168.1.76:4000/api/theses";
+	var thesesUrl = "http://localhost:4000/api/theses";
 	var argumentsDisplayLimit = 2;
 
 
