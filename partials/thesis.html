@@ -1,0 +1,10 @@
+<span class="thesis-container detail">
+	<ul>
+		<li class="thesis">{{thesis.Text}}</li>
+		<li class="argument createArgument">
+			<span class="edit">&#9998;</span>
+			<input type="text" ng-model="argumentText" placeholder="Your new argument here...">
+		</li>
+		<li class="argument" ng-class="{con : argument.Contra , pro : !argument.Contra}" ng-repeat="argument in thesis.Arguments | orderBy:'-Votes'">{{argument.Text}}<span class="votes"><a href="#">+{{argument.Votes}}</a> <span class="nowrap block top5"><span class="edit"> &#9998; </span><input type="text"  class="create" ng-model="argumentText" placeholder="counter..."></span></span></li>
+	</ul>
+</span>

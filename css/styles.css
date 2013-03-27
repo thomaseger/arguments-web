@@ -1,5 +1,5 @@
 /*Google Web Fonts imports*/
-@import url(http://fonts.googleapis.com/css?family=Rock+Salt|Oxygen);
+/*@import url(http://fonts.googleapis.com/css?family=Rock+Salt|Oxygen);*/
 
 /*common css*/
 body {
@@ -26,6 +26,8 @@ body {
   color: white;
   
   border-bottom: 1px solid #1F4A1B;
+
+  z-index: 999;
 }
 
 #header-bar-left {

@@ -1,25 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" id="arguments">
+<!doctype html>
+<html lang="en" id="arguments" ng-app="arguments">
 <head>
   <title>arguments!</title>
   
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <link rel="stylesheet" type="text/css" href="css/thesis.css" />
        
-  <script src="js/lib/jquery-1.9.1.js"></script> 
-  <script src="js/ui.js"></script> 
-
-  <script type="text/javascript">
-    $.ajaxSetup ({
-      timeout: 3000
-    });
-
-    $(document).ready(function() {
-      var ui = new UI();
-      ui.showAllTheses();
-    });  
-  </script> 
-  
+  <script src="js/lib/angular.js"></script> 
+  <script src="js/controllers.js"></script> 
+  <script src="js/app.js"></script>
 </head>
 
 <body>
@@ -29,13 +18,7 @@
       <div id="header-bar-right">Logged in as <strong>tom</strong></div>
     </div>
 
-    <div class="thesis-container createThesis">
-      <ul>
-        <li class="thesis">
-          <span class="edit">&#9998;</span> <input type="text" value="Your new thesis here..." onfocus="if(this.value == this.defaultValue) this.value = '';" onblur="if(!this.value) this.value = this.defaultValue;">
-        </li>
-      </ul>
-    </div>
+    <div id="content" ng-view></div>
   </div>
 
 </body>
