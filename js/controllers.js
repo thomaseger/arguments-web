@@ -25,6 +25,23 @@ function ThesesController($scope, $http) {
 		console.log(headers);
 		console.log(config);
 	});
+
+	$scope.addThesis = function() {
+		console.log("Sending new thesis...");
+
+		$http.post(URL_GET_THESES, $scope.thesisText).
+		success(function(data, status, headers, config) {
+			console.log(data);
+		}).
+		error(function(data, status, headers, config) {
+			console.log('Error in ThesesController: ');
+			console.log(data);
+			console.log(status);
+			console.log(headers);
+			console.log(config);
+		});
+
+	}
 }
 
 function ThesisController($scope, $http, $routeParams) {
@@ -42,4 +59,5 @@ function ThesisController($scope, $http, $routeParams) {
 		console.log(headers);
 		console.log(config);
 	});
+
 }

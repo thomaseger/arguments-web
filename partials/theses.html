@@ -1,11 +1,12 @@
-
 <span class="thesis-container createThesis">
-  <ul>
-    <li class="thesis">
-      <span class="edit">&#9998;</span>
-      <input type="text" ng-model="thesisText" placeholder="Your new thesis here...">
-    </li>
-  </ul>
+  <form ng-submit="addThesis()">
+    <ul>
+      <li class="thesis">
+        <span class="edit">&#9998;</span>
+        <input type="text" ng-model="thesisText" placeholder="Your new thesis here..."> 
+      </li>
+    </ul>
+  </form>
 </span>
 
 <span ng-class="{sub : $first}" class="thesis-container" ng-repeat="thesis in theses">
