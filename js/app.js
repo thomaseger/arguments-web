@@ -4,6 +4,8 @@ var argumentsApp = angular.module('arguments', []).config(['$routeProvider', fun
 		.otherwise({redirectTo: '/theses'});
 }]);
 
-argumentsApp.config(['$httpProvider', function($httpProvider) {
+argumentsApp.config(['$httpProvider', '$compileProvider', function($httpProvider, $compileProvider) {
+	$compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+    
     delete $httpProvider.defaults.headers.common["X-Requested-With"]
 }]);
