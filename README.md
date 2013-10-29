@@ -1,1 +1,1 @@
-"The arguments browser client." 
+The arguments browser client.
